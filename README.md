@@ -2,6 +2,8 @@
 
 Features an easily deployable PHP server and UI for handling direct creator uploads for Cloudflare Stream.
 
+![demo](./demo.gif)
+
 ## Running
 
 First, create a `.env` file with the following details at the root of the directory:

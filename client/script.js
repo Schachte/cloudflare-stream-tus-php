@@ -13,7 +13,7 @@ document
       name: file.name,
       filename: file.name,
       filetype: file.type,
-      maxDurationSeconds: -50,
+      maxDurationSeconds: 600,
     };
 
     var upload = new tus.Upload(file, {

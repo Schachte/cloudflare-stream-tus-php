@@ -30,6 +30,13 @@ function onRequest($context) {
         ]);
     
         $destination = $response->getHeader('Location')[0];
+
+        $responseHeaders = $response->getHeaders();
+        foreach ($responseHeaders as $name => $values) {
+            foreach ($values as $value) {
+                header($name . ': ' . $value);
+            }
+        }
     
         header('Access-Control-Expose-Headers: Location');
         header('Access-Control-Allow-Headers: *');

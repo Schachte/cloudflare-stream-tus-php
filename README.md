@@ -13,11 +13,13 @@ CLOUDFLARE_ACCOUNT_ID=your_account_id
 CLOUDFLARE_API_TOKEN=your_api_token
 ```
 
-- `make run-dev` to run the server
-- `make run-dev-build` to run the server and force rebuild the image
+`make run-dev` to run the server
+
+_Hot reloading support is enabled. If you make changes to the code, the server and client will automatically reload those changes_
 
 
 ## Access
 
 - UI: `http://localhost:3000`
-- Upload endpoint: `https://localhost:3000/upload`
+- Upload endpoint: `http://localhost:3000/upload`
+- BrowserSync (used for hot reloading): `http://localhost:3001`

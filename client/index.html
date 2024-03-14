@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TUS Video Uploader</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+  </head>
+  <body>
+    <div class="container mx-auto my-8">
+      <h1 class="text-3xl font-bold mb-6 text-center">
+        <img
+          src="https://www.cloudflare.com/img/logo-cloudflare-dark.svg"
+          alt="Cloudflare Logo"
+          class="inline-block h-8 w-auto mr-2"
+        />
+        <a
+          target="_blank"
+          href="https://developers.cloudflare.com/stream/uploading-videos/direct-creator-uploads/"
+          target="_blank"
+          class="text-indigo-600 hover:text-indigo-800"
+          >Stream TUS Video Uploader</a
+        >
+      </h1>
+      <div class="max-w-md mx-auto">
+        <form
+          id="upload-form"
+          class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        >
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="file-input"
+            >
+              Select a video to upload:
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="file"
+              id="file-input"
+              accept="video/*"
+            />
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Upload
+            </button>
+          </div>
+        </form>
+        <div id="progress-container" class="hidden">
+          <div class="relative pt-1">
+            <div
+              class="overflow-hidden h-4 mb-4 text-xs flex rounded bg-indigo-700"
+            >
+              <div
+                class="progress-bar shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-500 transition-all duration-500 ease-in-out"
+                role="progressbar"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/tus-js-client/dist/tus.min.js"></script>
+    <script src="/client/script.js"></script>
+  </body>
+</html>

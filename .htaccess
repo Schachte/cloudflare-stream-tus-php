@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# UI
+RewriteRule ^$ /client/index.html [L]
+
+# Stream TUS upload server
+RewriteRule ^upload$ /server/tus.php [L]
